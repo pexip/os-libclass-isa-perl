@@ -1,0 +1,32 @@
+Source: libclass-isa-perl
+Section: perl
+Priority: standard
+Build-Depends: debhelper (>= 7)
+Build-Depends-Indep: perl
+Maintainer: Debian Perl Group <pkg-perl-maintainers@lists.alioth.debian.org>
+Uploaders: Dominic Hargreaves <dom@earth.li>
+Standards-Version: 3.9.2
+Homepage: http://search.cpan.org/dist/Class-ISA/
+Vcs-Git: git://git.debian.org/pkg-perl/packages/libclass-isa-perl.git
+Vcs-Browser: http://anonscm.debian.org/gitweb/?p=pkg-perl/packages/libclass-isa-perl.git
+
+Package: libclass-isa-perl
+Architecture: all
+Depends: ${misc:Depends}
+Description: report the search path for a class's ISA tree
+ Suppose you have a class (like Food::Fish::Fishstick) that is derived, via
+ its @ISA, from one or more superclasses (as Food::Fish::Fishstick is from
+ Food::Fish, Life::Fungus, and Chemicals), and some of those superclasses may
+ themselves each be derived, via its @ISA, from one or more superclasses (as
+ above).
+ .
+ When, then, you call a method in that class ($fishstick->calories), Perl
+ first searches there for that method, but if it's not there, it goes
+ searching in its superclasses, and so on, in a depth-first (or maybe
+ "height-first" is the word) search. In the above example, it'd first look in
+ Food::Fish, then Food, then Matter, then Life::Fungus, then Life, then
+ Chemicals.
+ .
+ This library, Class::ISA, provides functions that return that list -- the
+ list (in order) of names of classes Perl would search to find a method, with
+ no duplicates.

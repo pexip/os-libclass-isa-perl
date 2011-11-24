@@ -1,0 +1,13 @@
+Subject: Don't use 'use if' to contain our Depends to perl-base (#649101)
+
+--- a/lib/Class/ISA.pm	2011-07-31 19:18:13.000000000 +0100
++++ b/lib/Class/ISA.pm	2011-11-24 16:51:55.000000000 +0000
+@@ -5,8 +5,6 @@
+ $VERSION = '0.36';
+ $Debug = 0 unless defined $Debug;
+ 
+-use if $] >= 5.011, 'deprecate';
+-
+ ###########################################################################
+ 
+ sub self_and_super_versions {

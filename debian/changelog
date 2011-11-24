@@ -1,0 +1,31 @@
+libclass-isa-perl (0.36-3) unstable; urgency=low
+
+  [ Salvatore Bonaccorso ]
+  * debian/copyright: Replace DEP5 Format-Specification URL from
+    svn.debian.org to anonscm.debian.org URL.
+
+  [ Dominic Hargreaves ]
+  * Remove use of 'use if' so that this package doesn't need to depend on
+    perl
+  * Don't depend on perl, to break a circular Depends (closes: #649101)
+
+ -- Dominic Hargreaves <dom@earth.li>  Thu, 24 Nov 2011 17:33:33 +0000
+
+libclass-isa-perl (0.36-2) unstable; urgency=low
+
+  [ Ansgar Burchardt ]
+  * debian/control: Convert Vcs-* fields to Git.
+
+  [ Dominic Hargreaves ]
+  * Update Standards-Version (no changes)
+  * Switch to dpkg-source 3.0 (quilt) format
+  * Set Priority: standard for the wheezy release cycle, during which
+    the perl package will pull this in (see: #629472)
+
+ -- Dominic Hargreaves <dom@earth.li>  Sun, 31 Jul 2011 19:22:07 +0100
+
+libclass-isa-perl (0.36-1) unstable; urgency=low
+
+  * Initial Release (closes: #580058)
+
+ -- Dominic Hargreaves <dom@earth.li>  Mon, 03 May 2010 16:49:36 +0100
